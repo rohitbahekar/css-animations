@@ -1,0 +1,69 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(357deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 36%, rgba(0,212,255,1) 100%);
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    position: relative;
+}
+.window {
+    width: 100%;
+    background-image: url(./icons/svg/005-window.svg);
+}
+
+.boat{
+    left:-10%;
+    animation: boatMovementFrame 17s ease-in infinite;
+    position: relative;
+}
+
+@keyframes boatMovementFrame{
+    0% {
+        left:-10%;
+    }
+    100% {
+        left:110%;
+    }
+}
+
+.boatJerk{
+    position: relative;
+    animation: boatJerkFrame 2s ease-in-out .5s infinite;
+}
+
+@keyframes boatJerkFrame{
+    0% {
+        top:0rem;
+    }
+    50% {
+        top:-.75rem;
+    }
+    100%{
+        top:0rem;
+    }
+}
+
+.wheel{
+    animation: rotateCircle 5s linear 0s infinite;
+}
+.wheel:hover{
+    animation: none;
+    height: 95%;
+}
+
+@keyframes rotateCircle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(359deg);
+    }
+}
